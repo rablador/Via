@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DepartureDetailsFooterView" customModule="Via" customModuleProvider="target">
+            <connections>
+                <outlet property="newCommuteButton" destination="JiR-QI-jam" id="Y6z-st-Zp5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-yT-nFf" userLabel="Line">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="3"/>
+                    <color key="backgroundColor" red="0.094117647060000004" green="0.16078431369999999" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="wSa-CG-dxo"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZY-w1-9oB" userLabel="Container">
+                    <rect key="frame" x="0.0" y="3" width="375" height="52"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="icon_bell" translatesAutoresizingMaskIntoConstraints="NO" id="9mC-SJ-QEs">
+                            <rect key="frame" x="15" y="16" width="20" height="20"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ny bevakning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfg-ZA-Kmy">
+                            <rect key="frame" x="46" y="15" width="115" height="22"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" red="0.52549019610000003" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiR-QI-jam">
+                            <rect key="frame" x="0.0" y="0.0" width="161" height="52"/>
+                            <connections>
+                                <action selector="didPressNewCommuteButton:" destination="-1" eventType="touchUpInside" id="01J-x2-yaf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="JiR-QI-jam" firstAttribute="leading" secondItem="MZY-w1-9oB" secondAttribute="leading" id="3ZE-0T-ggR"/>
+                        <constraint firstAttribute="bottom" secondItem="JiR-QI-jam" secondAttribute="bottom" id="7Vr-Ss-kwC"/>
+                        <constraint firstItem="9mC-SJ-QEs" firstAttribute="centerY" secondItem="MZY-w1-9oB" secondAttribute="centerY" id="CY7-AO-2ma"/>
+                        <constraint firstItem="Yfg-ZA-Kmy" firstAttribute="centerY" secondItem="MZY-w1-9oB" secondAttribute="centerY" id="Csn-8c-2Am"/>
+                        <constraint firstItem="Yfg-ZA-Kmy" firstAttribute="leading" secondItem="9mC-SJ-QEs" secondAttribute="trailing" constant="11" id="G6J-35-eFA"/>
+                        <constraint firstItem="JiR-QI-jam" firstAttribute="trailing" secondItem="Yfg-ZA-Kmy" secondAttribute="trailing" id="MC1-jr-ZDM"/>
+                        <constraint firstItem="9mC-SJ-QEs" firstAttribute="leading" secondItem="MZY-w1-9oB" secondAttribute="leading" constant="15" id="MyV-kW-ev1"/>
+                        <constraint firstItem="JiR-QI-jam" firstAttribute="top" secondItem="MZY-w1-9oB" secondAttribute="top" id="RsD-J4-C2a"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yfg-ZA-Kmy" secondAttribute="trailing" constant="15" id="vbF-N5-deA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="MZY-w1-9oB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8Zu-ha-I9B"/>
+                <constraint firstAttribute="trailing" secondItem="Vwa-yT-nFf" secondAttribute="trailing" id="8qT-qP-BPs"/>
+                <constraint firstItem="MZY-w1-9oB" firstAttribute="top" secondItem="Vwa-yT-nFf" secondAttribute="bottom" id="SZK-9u-FBh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MZY-w1-9oB" secondAttribute="trailing" id="XoR-4O-9br"/>
+                <constraint firstItem="Vwa-yT-nFf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="j2Q-WC-0Na"/>
+                <constraint firstAttribute="bottom" secondItem="MZY-w1-9oB" secondAttribute="bottom" id="kY4-5e-EEP"/>
+                <constraint firstItem="Vwa-yT-nFf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="z6J-rl-vdb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="67.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_bell" width="20" height="20"/>
+    </resources>
+</document>

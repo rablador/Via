@@ -1,0 +1,4 @@
+framework module DTTableViewManager {
+    header "DTTableViewManager-Swift.h"
+    requires objc
+}

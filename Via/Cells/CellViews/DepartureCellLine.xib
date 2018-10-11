@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DepartureCellLine" customModule="Via" customModuleProvider="target">
+            <connections>
+                <outlet property="background" destination="wyL-Kn-G4m" id="LBj-hx-Orf"/>
+                <outlet property="name" destination="h01-3A-WDh" id="gNP-4y-t0Q"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyL-Kn-G4m">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="h01-3A-WDh" userLabel="Line">
+                            <rect key="frame" x="4" y="4" width="42" height="42"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="h01-3A-WDh" secondAttribute="bottom" constant="4" id="7nB-Zu-7cD"/>
+                        <constraint firstAttribute="trailing" secondItem="h01-3A-WDh" secondAttribute="trailing" constant="4" id="Fa2-mY-epV"/>
+                        <constraint firstItem="h01-3A-WDh" firstAttribute="leading" secondItem="wyL-Kn-G4m" secondAttribute="leading" constant="4" id="JGg-nE-hhA"/>
+                        <constraint firstItem="h01-3A-WDh" firstAttribute="top" secondItem="wyL-Kn-G4m" secondAttribute="top" constant="4" id="WFR-oc-eBF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wyL-Kn-G4m" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9ml-ny-59z"/>
+                <constraint firstItem="wyL-Kn-G4m" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DN4-rL-Zff"/>
+                <constraint firstAttribute="bottom" secondItem="wyL-Kn-G4m" secondAttribute="bottom" id="iEJ-vQ-hRa"/>
+                <constraint firstAttribute="trailing" secondItem="wyL-Kn-G4m" secondAttribute="trailing" id="n60-Wb-QgP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

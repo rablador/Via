@@ -1,0 +1,39 @@
+language: objective-c
+sudo: false
+osx_image: xcode9.3
+
+cache:
+  directories:
+  - Carthage
+
+matrix:
+  include:
+    - os: osx
+      env: ACTION=test_ios11
+    - os: osx
+      env: ACTION=test_ios10
+    - os: osx
+      env: ACTION=test_tvos11
+    - os: osx
+      env: ACTION=test_tvos10
+    - os: osx
+      env: ACTION=test_ios_swift3
+    - os: osx
+      env: ACTION=test_tvos_swift3
+    - os: osx
+      env: ACTION=pod_lint
+    - os: osx
+      env: ACTION=carthage_build
+
+before_script:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+  - carthage bootstrap --cache-builds
+
+script:
+  - instruments -s devices # List all available simulators
+  - bundle exec fastlane $ACTION
+
+env:
+  global:
+    secure: k7szPQW4SmTEA29auFG3+fEeNIz6MZtYHiA+GLof5fWnTXbAEdmlxqQTgHSi+5u07cJqJPoR1k2/DN/5dMYLe5LBsMkRlx3XOUVS/Ean/bELefm270QHRXapt6mqQLHanZH9duTscUBgDgpdFxEKblc9fge24z6TyEgPHswtgT4=

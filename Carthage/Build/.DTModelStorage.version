@@ -1,0 +1,9 @@
+{
+  "commitish" : "d85bfcc228faa1eed9d0daa81576d7b9676f6e86",
+  "iOS" : [
+    {
+      "name" : "DTModelStorage",
+      "hash" : "dc2f074195a43e6d0f6c8e29a0cde179da5f56c23aad1add7ada5e23c6885224"
+    }
+  ]
+}

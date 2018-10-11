@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Eut-fn-5Nu" customClass="DestinationCell" customModule="Via" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="76" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="76" height="28"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-jn-zdV">
+                        <rect key="frame" x="8" y="5.5" width="60" height="17"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_search" translatesAutoresizingMaskIntoConstraints="NO" id="E69-o5-fTJ">
+                                <rect key="frame" x="-8" y="0.0" width="0.0" height="17"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ewc-F4-eXM">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="17"/>
+                                <subviews>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_search_inverted" translatesAutoresizingMaskIntoConstraints="NO" id="QjR-lZ-OgE">
+                                        <rect key="frame" x="-8" y="0.0" width="17" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="17" id="1tn-f6-16M"/>
+                                            <constraint firstAttribute="height" constant="17" id="9vG-pp-Nnh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hem" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQN-K4-XEJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" red="0.57254901960000004" green="0.7725490196" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cgV-jn-zdV" firstAttribute="centerY" secondItem="Eut-fn-5Nu" secondAttribute="centerY" id="XmX-Vh-DYL"/>
+                <constraint firstAttribute="trailing" secondItem="cgV-jn-zdV" secondAttribute="trailing" constant="8" id="oIQ-9V-3Ze"/>
+                <constraint firstItem="cgV-jn-zdV" firstAttribute="leading" secondItem="Eut-fn-5Nu" secondAttribute="leading" constant="8" id="zdv-nf-47g"/>
+            </constraints>
+            <size key="customSize" width="65" height="28"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="3"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="contentContainer" destination="ewc-F4-eXM" id="pNU-3H-JUi"/>
+                <outlet property="icon" destination="QjR-lZ-OgE" id="9pc-G6-nwj"/>
+                <outlet property="leftConstraint" destination="zdv-nf-47g" id="mrW-F9-mFx"/>
+                <outlet property="name" destination="mQN-K4-XEJ" id="Erc-7b-s3K"/>
+                <outlet property="searchButton" destination="E69-o5-fTJ" id="foU-fz-Vp5"/>
+            </connections>
+            <point key="canvasLocation" x="-159" y="-97"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_search" width="22" height="22"/>
+        <image name="icon_search_inverted" width="22" height="22"/>
+    </resources>
+</document>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimePlannerView" customModule="Via" customModuleProvider="target">
+            <connections>
+                <outlet property="container" destination="hnF-eN-Iy1" id="Wyz-VI-qVu"/>
+                <outlet property="containerTopConstraint" destination="NJl-BR-njZ" id="rkK-eP-ysm"/>
+                <outlet property="datePicker" destination="NOC-jq-TiK" id="Fa6-WF-sGc"/>
+                <outlet property="fadeView" destination="R7L-GZ-zJd" id="QHB-Dt-hrc"/>
+                <outlet property="okButton" destination="HOO-yI-vWF" id="Gbo-IU-qgc"/>
+                <outlet property="segmentedControl" destination="PWV-b2-Sc0" id="bT7-ZX-qbU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="fgt-Gu-T7D">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7L-GZ-zJd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.094117647060000004" green="0.16078431369999999" blue="0.23921568630000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="d1Y-zj-qi9" appends="YES" id="f7n-Ht-NFr"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnF-eN-Iy1">
+                    <rect key="frame" x="10" y="-325" width="355" height="325"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NOC-jq-TiK">
+                            <rect key="frame" x="8" y="8" width="339" height="162"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="162" id="4V2-gX-4PH"/>
+                            </constraints>
+                            <date key="date" timeIntervalSinceReferenceDate="552313066.56180799">
+                                <!--2018-07-03 12:17:46 +0000-->
+                            </date>
+                            <locale key="locale" localeIdentifier="sv"/>
+                            <connections>
+                                <action selector="datePickerDidChange:" destination="-1" eventType="valueChanged" id="E9m-le-UhZ"/>
+                            </connections>
+                        </datePicker>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PWV-b2-Sc0">
+                            <rect key="frame" x="87" y="186" width="180" height="31"/>
+                            <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="180" id="jSP-Ou-g6w"/>
+                                <constraint firstAttribute="height" constant="30" id="v8q-L4-cS2"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Avgång"/>
+                                <segment title="Ankomst"/>
+                            </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="segmentedControlDidChange:" destination="-1" eventType="valueChanged" id="80k-wh-nG7"/>
+                            </connections>
+                        </segmentedControl>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOO-yI-vWF">
+                            <rect key="frame" x="155" y="248" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="6ca-MB-5TT"/>
+                                <constraint firstAttribute="width" constant="44" id="Bw9-a0-9bB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" red="0.52549019610000003" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="disabled">
+                                <color key="titleColor" red="0.30980392159999998" green="0.38823529410000002" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="22"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.52549019610000003" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didPressOkButton:" destination="-1" eventType="touchUpInside" id="f5W-3y-15I"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="NOC-jq-TiK" firstAttribute="top" secondItem="hnF-eN-Iy1" secondAttribute="top" constant="8" id="6Es-yh-1ip"/>
+                        <constraint firstAttribute="trailing" secondItem="NOC-jq-TiK" secondAttribute="trailing" constant="8" id="B69-VK-BOB"/>
+                        <constraint firstItem="PWV-b2-Sc0" firstAttribute="centerX" secondItem="hnF-eN-Iy1" secondAttribute="centerX" id="Ogb-mq-plj"/>
+                        <constraint firstItem="PWV-b2-Sc0" firstAttribute="top" secondItem="NOC-jq-TiK" secondAttribute="bottom" constant="16" id="Qaw-cV-6t9"/>
+                        <constraint firstItem="NOC-jq-TiK" firstAttribute="leading" secondItem="hnF-eN-Iy1" secondAttribute="leading" constant="8" id="ZG1-D2-t3A"/>
+                        <constraint firstItem="HOO-yI-vWF" firstAttribute="top" secondItem="PWV-b2-Sc0" secondAttribute="bottom" constant="32" id="lS9-9p-IXf"/>
+                        <constraint firstItem="HOO-yI-vWF" firstAttribute="centerX" secondItem="hnF-eN-Iy1" secondAttribute="centerX" id="uDQ-Vj-pwL"/>
+                        <constraint firstAttribute="height" constant="325" id="wZP-WA-Jgz"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="kXo-35-Qzh" appends="YES" id="tOn-GU-Spq"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="hnF-eN-Iy1" secondAttribute="trailing" constant="10" id="1Hf-bR-WPP"/>
+                <constraint firstItem="R7L-GZ-zJd" firstAttribute="top" secondItem="fgt-Gu-T7D" secondAttribute="top" id="I7K-HE-blR"/>
+                <constraint firstItem="hnF-eN-Iy1" firstAttribute="top" secondItem="fgt-Gu-T7D" secondAttribute="top" constant="-325" id="NJl-BR-njZ"/>
+                <constraint firstItem="R7L-GZ-zJd" firstAttribute="leading" secondItem="fgt-Gu-T7D" secondAttribute="leading" id="UCa-fd-Aw2"/>
+                <constraint firstItem="hnF-eN-Iy1" firstAttribute="leading" secondItem="fgt-Gu-T7D" secondAttribute="leading" constant="10" id="Y9S-gq-JrV"/>
+                <constraint firstAttribute="bottom" secondItem="R7L-GZ-zJd" secondAttribute="bottom" id="dxx-AL-mNw"/>
+                <constraint firstAttribute="trailing" secondItem="R7L-GZ-zJd" secondAttribute="trailing" id="rae-wj-D4a"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <swipeGestureRecognizer direction="up" id="kXo-35-Qzh">
+            <connections>
+                <action selector="didSwipeUp:" destination="-1" id="xMi-xF-zcZ"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <tapGestureRecognizer id="d1Y-zj-qi9">
+            <connections>
+                <action selector="didTap:" destination="-1" id="0YE-qq-JQC"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

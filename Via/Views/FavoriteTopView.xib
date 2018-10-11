@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoriteTopView" customModule="Via" customModuleProvider="target">
+            <connections>
+                <outlet property="changeButton" destination="cZS-ER-cvz" id="zG6-LA-YBV"/>
+                <outlet property="closeButton" destination="mSe-ZM-Gzn" id="kA2-V6-4iZ"/>
+                <outlet property="newButton" destination="6VR-G8-lIK" id="aLl-NH-vzy"/>
+                <outlet property="searchContainer" destination="BJW-sA-of1" id="7y1-9y-Rau"/>
+                <outlet property="searchInputView" destination="JTV-km-fbJ" id="WKu-wc-YJn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VR-G8-lIK">
+                    <rect key="frame" x="0.0" y="0.0" width="115" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="115" id="1GH-Ie-roH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="NY FAVORIT">
+                        <color key="titleColor" red="0.52549019610000003" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.30980392159999998" green="0.38823529410000002" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapNewButton:" destination="-1" eventType="touchUpInside" id="ygZ-6u-BC6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZS-ER-cvz">
+                    <rect key="frame" x="290" y="0.0" width="85" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="CoP-Pl-UoL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                    <state key="normal" title="ÄNDRA">
+                        <color key="titleColor" red="0.52549019610000003" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.30980392159999998" green="0.38823529410000002" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapChangeButton:" destination="-1" eventType="touchUpInside" id="h3J-gM-MNe"/>
+                    </connections>
+                </button>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJW-sA-of1">
+                    <rect key="frame" x="10" y="0.0" width="355" height="56"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTV-km-fbJ" customClass="SearchInputView" customModule="Via" customModuleProvider="target">
+                            <rect key="frame" x="16" y="0.0" width="283" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSe-ZM-Gzn">
+                            <rect key="frame" x="299" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="mSe-ZM-Gzn" secondAttribute="height" multiplier="1:1" id="QNu-pA-EQi"/>
+                                <constraint firstAttribute="height" constant="56" id="nck-mD-S6Y"/>
+                            </constraints>
+                            <state key="normal" image="icon_return"/>
+                            <connections>
+                                <action selector="didTapCloseButton:" destination="-1" eventType="touchUpInside" id="KLN-fF-rH2"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="mSe-ZM-Gzn" firstAttribute="leading" secondItem="JTV-km-fbJ" secondAttribute="trailing" id="PM2-XA-Uwq"/>
+                        <constraint firstItem="JTV-km-fbJ" firstAttribute="leading" secondItem="BJW-sA-of1" secondAttribute="leading" constant="16" id="QWh-SB-1mr"/>
+                        <constraint firstAttribute="trailing" secondItem="mSe-ZM-Gzn" secondAttribute="trailing" id="RNm-WO-W2F"/>
+                        <constraint firstAttribute="bottom" secondItem="JTV-km-fbJ" secondAttribute="bottom" id="aPq-Hh-ASG"/>
+                        <constraint firstItem="mSe-ZM-Gzn" firstAttribute="top" secondItem="BJW-sA-of1" secondAttribute="top" id="d1V-Ez-hXA"/>
+                        <constraint firstItem="JTV-km-fbJ" firstAttribute="top" secondItem="BJW-sA-of1" secondAttribute="top" id="iFG-vn-kt5"/>
+                        <constraint firstAttribute="bottom" secondItem="mSe-ZM-Gzn" secondAttribute="bottom" id="yXL-Ce-P1K"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.094117647060000004" green="0.16078431369999999" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BJW-sA-of1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="4rX-52-Nzb"/>
+                <constraint firstAttribute="bottom" secondItem="BJW-sA-of1" secondAttribute="bottom" id="82F-RT-XqJ"/>
+                <constraint firstItem="6VR-G8-lIK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9ZZ-qR-yGf"/>
+                <constraint firstItem="6VR-G8-lIK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Iub-Qk-2O9"/>
+                <constraint firstItem="cZS-ER-cvz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kl2-sb-zkG"/>
+                <constraint firstItem="BJW-sA-of1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rtn-hv-rzt"/>
+                <constraint firstAttribute="bottom" secondItem="cZS-ER-cvz" secondAttribute="bottom" id="a8P-tY-CrB"/>
+                <constraint firstAttribute="trailing" secondItem="BJW-sA-of1" secondAttribute="trailing" constant="10" id="jBA-lF-Egc"/>
+                <constraint firstAttribute="bottom" secondItem="6VR-G8-lIK" secondAttribute="bottom" id="k3W-CZ-tRb"/>
+                <constraint firstAttribute="trailing" secondItem="cZS-ER-cvz" secondAttribute="trailing" id="yuH-Q0-ulZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="26.5" y="53"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_return" width="20" height="20"/>
+    </resources>
+</document>

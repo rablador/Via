@@ -1,0 +1,9 @@
+{
+  "commitish" : "6.3.0",
+  "iOS" : [
+    {
+      "name" : "DTTableViewManager",
+      "hash" : "e9f3fa937f4a94b47f613daab04c3fdb0401a1003ac543b497ffa9854ac71ec8"
+    }
+  ]
+}

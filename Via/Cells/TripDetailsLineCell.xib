@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="S6i-i5-6te" customClass="TripDetailsLineCell" customModule="Via" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S6i-i5-6te" id="soG-be-1Og">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SN1-eQ-1Uq" customClass="DepartureDetailsCellView" customModule="Via" customModuleProvider="target">
+                        <rect key="frame" x="15" y="0.0" width="340" height="46"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="YIp-AE-aP7"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYE-E3-xFd">
+                        <rect key="frame" x="0.0" y="46" width="375" height="45.5"/>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.27450980390000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hV0-hd-Oaa" customClass="TripDetailsLineCellView" customModule="Via" customModuleProvider="target">
+                        <rect key="frame" x="15" y="46" width="340" height="45.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="hV0-hd-Oaa" secondAttribute="bottom" id="MoE-g4-zZc"/>
+                    <constraint firstItem="jYE-E3-xFd" firstAttribute="leading" secondItem="soG-be-1Og" secondAttribute="leading" id="NVY-M6-X4W"/>
+                    <constraint firstItem="SN1-eQ-1Uq" firstAttribute="leading" secondItem="soG-be-1Og" secondAttribute="leading" constant="15" id="QO9-6m-aD0"/>
+                    <constraint firstItem="jYE-E3-xFd" firstAttribute="bottom" secondItem="hV0-hd-Oaa" secondAttribute="bottom" id="UGo-yX-K49"/>
+                    <constraint firstAttribute="trailing" secondItem="jYE-E3-xFd" secondAttribute="trailing" id="VKG-oV-pjF"/>
+                    <constraint firstItem="hV0-hd-Oaa" firstAttribute="top" secondItem="SN1-eQ-1Uq" secondAttribute="bottom" id="aKU-pN-hfC"/>
+                    <constraint firstAttribute="trailing" secondItem="hV0-hd-Oaa" secondAttribute="trailing" constant="20" id="eyi-fs-xwp"/>
+                    <constraint firstItem="SN1-eQ-1Uq" firstAttribute="top" secondItem="soG-be-1Og" secondAttribute="top" id="gWT-Mz-2fS"/>
+                    <constraint firstItem="jYE-E3-xFd" firstAttribute="top" secondItem="hV0-hd-Oaa" secondAttribute="top" id="mc4-0o-ihG"/>
+                    <constraint firstItem="hV0-hd-Oaa" firstAttribute="leading" secondItem="soG-be-1Og" secondAttribute="leading" constant="15" id="qjR-GO-TXk"/>
+                    <constraint firstAttribute="trailing" secondItem="SN1-eQ-1Uq" secondAttribute="trailing" constant="20" id="ybB-BF-CNc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="cellView" destination="SN1-eQ-1Uq" id="zmf-cl-M7Y"/>
+                <outlet property="lineCellView" destination="hV0-hd-Oaa" id="QmM-Pd-BQm"/>
+            </connections>
+            <point key="canvasLocation" x="17.5" y="227"/>
+        </tableViewCell>
+    </objects>
+</document>

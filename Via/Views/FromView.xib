@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FromView" customModule="Via" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="CCY-of-yr4" id="Ek3-Ug-ciK"/>
+                <outlet property="fromIcon" destination="xvL-kr-raL" id="whh-Y5-Kek"/>
+                <outlet property="placeholder" destination="1eU-da-t6F" id="KgF-q5-C03"/>
+                <outlet property="resetButton" destination="NAE-Hs-wml" id="WH0-dc-ui8"/>
+                <outlet property="searchButton" destination="HKr-qF-Vui" id="vgC-hb-juH"/>
+                <outlet property="searchContainer" destination="1no-CG-rvp" id="S4R-Tp-rYC"/>
+                <outlet property="searchInputView" destination="Fve-Q4-2fZ" id="B6l-vB-cRG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" image="icon_from" translatesAutoresizingMaskIntoConstraints="NO" id="xvL-kr-raL">
+                    <rect key="frame" x="0.0" y="17" width="33" height="22"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Söker hållplats..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="1eU-da-t6F">
+                    <rect key="frame" x="46" y="15" width="172.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <color key="textColor" red="0.52549019610000003" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" alpha="0.0" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAE-Hs-wml">
+                    <rect key="frame" x="319" y="0.0" width="56" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="EF6-ku-vMG"/>
+                        <constraint firstAttribute="width" secondItem="NAE-Hs-wml" secondAttribute="height" multiplier="1:1" id="cBj-51-Gx0"/>
+                    </constraints>
+                    <state key="normal" image="icon_nearest"/>
+                    <connections>
+                        <action selector="resetButtonWasTapped:" destination="-1" eventType="touchUpInside" id="Axd-eE-SBd"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1no-CG-rvp">
+                    <rect key="frame" x="46" y="0.5" width="329" height="56"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fve-Q4-2fZ" customClass="SearchInputView" customModule="Via" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="273" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCY-of-yr4">
+                            <rect key="frame" x="273" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="Ljc-l3-4Qa"/>
+                                <constraint firstAttribute="width" secondItem="CCY-of-yr4" secondAttribute="height" multiplier="1:1" id="gb3-88-U6w"/>
+                            </constraints>
+                            <state key="normal" image="icon_return"/>
+                            <connections>
+                                <action selector="closeButtonWasTapped:" destination="-1" eventType="touchUpInside" id="83X-Qb-q4Z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKr-qF-Vui">
+                    <rect key="frame" x="0.0" y="0.0" width="218.5" height="56"/>
+                    <connections>
+                        <action selector="searchButtonWasTapped:" destination="-1" eventType="touchUpInside" id="mc5-7S-U3Q"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NAE-Hs-wml" firstAttribute="centerY" secondItem="1eU-da-t6F" secondAttribute="centerY" id="2fq-bH-UoB"/>
+                <constraint firstAttribute="trailing" secondItem="1no-CG-rvp" secondAttribute="trailing" id="2jR-Hl-DSd"/>
+                <constraint firstItem="1eU-da-t6F" firstAttribute="leading" secondItem="1no-CG-rvp" secondAttribute="leading" id="3zd-ej-lbr"/>
+                <constraint firstItem="1eU-da-t6F" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="67J-x0-ETg"/>
+                <constraint firstItem="1no-CG-rvp" firstAttribute="leading" secondItem="xvL-kr-raL" secondAttribute="trailing" constant="13" id="DmX-6Y-wKp"/>
+                <constraint firstAttribute="bottom" secondItem="HKr-qF-Vui" secondAttribute="bottom" id="Tt5-ES-ntX"/>
+                <constraint firstItem="HKr-qF-Vui" firstAttribute="trailing" secondItem="1eU-da-t6F" secondAttribute="trailing" id="ZXP-OK-3hT"/>
+                <constraint firstItem="HKr-qF-Vui" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="f7X-eD-DI7"/>
+                <constraint firstAttribute="trailing" secondItem="NAE-Hs-wml" secondAttribute="trailing" id="kLk-9f-ZpV"/>
+                <constraint firstItem="HKr-qF-Vui" firstAttribute="leading" secondItem="xvL-kr-raL" secondAttribute="leading" id="sGs-TD-XKO"/>
+                <constraint firstItem="xvL-kr-raL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ucg-rd-PVh"/>
+                <constraint firstItem="xvL-kr-raL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vch-1K-Ns1"/>
+                <constraint firstItem="NAE-Hs-wml" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1eU-da-t6F" secondAttribute="trailing" id="xQw-lI-QS9"/>
+                <constraint firstItem="1no-CG-rvp" firstAttribute="centerY" secondItem="1eU-da-t6F" secondAttribute="centerY" constant="1" id="xqy-VW-fvV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_from" width="33" height="22"/>
+        <image name="icon_nearest" width="22" height="22"/>
+        <image name="icon_return" width="20" height="20"/>
+    </resources>
+</document>

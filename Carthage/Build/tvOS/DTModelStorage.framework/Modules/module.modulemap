@@ -1,0 +1,4 @@
+framework module DTModelStorage {
+    header "DTModelStorage-Swift.h"
+    requires objc
+}

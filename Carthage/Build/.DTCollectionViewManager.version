@@ -1,0 +1,9 @@
+{
+  "commitish" : "6.3.0",
+  "iOS" : [
+    {
+      "name" : "DTCollectionViewManager",
+      "hash" : "bbb316c39dcf601683e2145b5f9edc236c1c5e998549c3683a3869ba3e50461b"
+    }
+  ]
+}

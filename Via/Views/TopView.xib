@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopView" customModule="Via" customModuleProvider="target">
+            <connections>
+                <outlet property="fromView" destination="jn3-De-hpb" id="50M-5g-DAz"/>
+                <outlet property="timeButton" destination="5N4-sd-ZZX" id="8Rd-FQ-VFr"/>
+                <outlet property="timeButtonContainer" destination="x8P-Ze-Qcf" id="tBd-JA-nB8"/>
+                <outlet property="toView" destination="Thj-Ct-HG1" id="O5G-Wv-5wy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jn3-De-hpb" customClass="FromView" customModule="Via" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="H06-jg-iTQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Thj-Ct-HG1" customClass="ToView" customModule="Via" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="57" width="375" height="56"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="zcg-rE-dOE"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8P-Ze-Qcf">
+                    <rect key="frame" x="318" y="57" width="57" height="56"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yr8-cO-Y0f">
+                            <rect key="frame" x="0.0" y="0.0" width="1" height="56"/>
+                            <color key="backgroundColor" red="0.094117647060000004" green="0.16078431369999999" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N4-sd-ZZX">
+                            <rect key="frame" x="1" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="qx8-Wg-UCC"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="17" minY="17" maxX="17" maxY="17"/>
+                            <state key="normal" image="icon_time"/>
+                            <connections>
+                                <action selector="didTapTimeButton:" destination="-1" eventType="touchUpInside" id="Elh-kt-zJ5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="5N4-sd-ZZX" firstAttribute="width" secondItem="5N4-sd-ZZX" secondAttribute="height" multiplier="1:1" id="coK-uA-pvw"/>
+                        <constraint firstAttribute="width" constant="57" id="wva-jv-T3G"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.094117647060000004" green="0.16078431369999999" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="x8P-Ze-Qcf" secondAttribute="trailing" id="GSy-IH-hQb"/>
+                <constraint firstAttribute="trailing" secondItem="Thj-Ct-HG1" secondAttribute="trailing" id="Tzc-Vh-pQy"/>
+                <constraint firstItem="jn3-De-hpb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" identifier="fromViewTopConstraint" id="Z6N-ol-zcO"/>
+                <constraint firstItem="Thj-Ct-HG1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eMm-dj-Ggd"/>
+                <constraint firstItem="x8P-Ze-Qcf" firstAttribute="centerY" secondItem="Thj-Ct-HG1" secondAttribute="centerY" id="fQi-8f-OHH"/>
+                <constraint firstItem="Thj-Ct-HG1" firstAttribute="top" secondItem="jn3-De-hpb" secondAttribute="bottom" constant="1" id="gam-Rg-HFY"/>
+                <constraint firstAttribute="trailing" secondItem="jn3-De-hpb" secondAttribute="trailing" id="ueY-0n-QQ6"/>
+                <constraint firstItem="jn3-De-hpb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="z5D-Av-kOa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="39.5" y="80"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_time" width="22" height="22"/>
+    </resources>
+</document>

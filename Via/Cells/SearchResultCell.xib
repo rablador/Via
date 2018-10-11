@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="fHc-nT-l7k" customClass="SearchResultCell" customModule="Via" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fHc-nT-l7k" id="Pkb-Wb-BpF">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_stop_short" translatesAutoresizingMaskIntoConstraints="NO" id="AXs-Vo-d7f">
+                        <rect key="frame" x="18" y="11" width="20" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Hyn-D9-uLN"/>
+                        </constraints>
+                    </imageView>
+                    <label contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gråberget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sC-dv-nIS">
+                        <rect key="frame" x="54" y="13" width="77" height="19.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <color key="textColor" red="0.80392156859999997" green="0.8980392157" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Göteborg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7el-aa-IxR">
+                        <rect key="frame" x="141" y="15.5" width="57" height="15"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" red="0.2901960784" green="0.43529411759999997" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.10980392160000001" green="0.16078431369999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="7el-aa-IxR" firstAttribute="centerY" secondItem="9sC-dv-nIS" secondAttribute="centerY" id="DqN-zD-iXP"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9sC-dv-nIS" secondAttribute="trailing" constant="8" id="Qdh-aQ-DIt"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="7el-aa-IxR" secondAttribute="trailing" constant="16" id="Wbf-h6-ZWO"/>
+                    <constraint firstItem="AXs-Vo-d7f" firstAttribute="leading" secondItem="Pkb-Wb-BpF" secondAttribute="leading" constant="18" id="Ygb-n2-FD8"/>
+                    <constraint firstItem="9sC-dv-nIS" firstAttribute="leading" secondItem="AXs-Vo-d7f" secondAttribute="trailing" constant="16" id="a0N-Q1-a4m"/>
+                    <constraint firstItem="AXs-Vo-d7f" firstAttribute="centerY" secondItem="Pkb-Wb-BpF" secondAttribute="centerY" id="bPO-gd-INy"/>
+                    <constraint firstItem="9sC-dv-nIS" firstAttribute="centerY" secondItem="AXs-Vo-d7f" secondAttribute="centerY" id="tyS-Ui-t9Z"/>
+                    <constraint firstItem="7el-aa-IxR" firstAttribute="leading" secondItem="9sC-dv-nIS" secondAttribute="trailing" constant="10" id="wAN-TP-TWt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="icon" destination="AXs-Vo-d7f" id="51b-XJ-1sb"/>
+                <outlet property="label" destination="9sC-dv-nIS" id="eqn-zG-WbM"/>
+                <outlet property="labelSuffix" destination="7el-aa-IxR" id="hEz-md-EB2"/>
+            </connections>
+            <point key="canvasLocation" x="17" y="-159"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_stop_short" width="16" height="22"/>
+    </resources>
+</document>

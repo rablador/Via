@@ -1,0 +1,5 @@
+#github "Moya/Moya"
+#github "Hearst-DD/ObjectMapper"
+github "PromiseKit/CoreLocation"
+#github "DenHeadless/DTTableViewManager"
+#github "DenHeadless/DTCollectionViewManager"

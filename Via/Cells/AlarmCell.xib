@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="SM6-ds-ia4" customClass="AlarmCell" customModule="Via" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SM6-ds-ia4" id="00B-CS-fIJ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q9s-es-QYs">
+                        <rect key="frame" x="16" y="13" width="16" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="cBe-6d-9eX"/>
+                            <constraint firstAttribute="height" constant="18" id="gvU-1M-HPd"/>
+                        </constraints>
+                    </imageView>
+                    <label contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gråberget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nO0-dP-th7">
+                        <rect key="frame" x="48" y="13" width="77" height="19.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <color key="textColor" red="0.50196078430000002" green="0.73725490199999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.10980392160000001" green="0.16078431369999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="nO0-dP-th7" firstAttribute="centerY" secondItem="q9s-es-QYs" secondAttribute="centerY" id="13q-yp-gGS"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nO0-dP-th7" secondAttribute="trailing" constant="8" id="GZW-8n-ifm"/>
+                    <constraint firstItem="q9s-es-QYs" firstAttribute="centerY" secondItem="00B-CS-fIJ" secondAttribute="centerY" id="a7f-aU-Szk"/>
+                    <constraint firstItem="nO0-dP-th7" firstAttribute="leading" secondItem="q9s-es-QYs" secondAttribute="trailing" constant="16" id="jL4-F1-V7B"/>
+                    <constraint firstItem="q9s-es-QYs" firstAttribute="leading" secondItem="00B-CS-fIJ" secondAttribute="leading" constant="16" id="xGV-9m-weK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="icon" destination="q9s-es-QYs" id="6Iy-Hm-6K5"/>
+                <outlet property="label" destination="nO0-dP-th7" id="ZBH-LP-thr"/>
+            </connections>
+            <point key="canvasLocation" x="17" y="-159"/>
+        </tableViewCell>
+    </objects>
+</document>

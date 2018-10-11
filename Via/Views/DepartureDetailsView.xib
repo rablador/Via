@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DepartureDetailsView" customModule="Via" customModuleProvider="target">
+            <connections>
+                <outlet property="container" destination="DFi-ex-ZQz" id="JSl-Ax-vRG"/>
+                <outlet property="containerHeightConstraint" destination="SGl-cD-Uz9" id="wRE-WQ-lXt"/>
+                <outlet property="containerTopConstraint" destination="Cot-jI-EFi" id="yeP-va-7jD"/>
+                <outlet property="contentContainerView" destination="Z3U-eA-YkN" id="vLR-1A-ROU"/>
+                <outlet property="contentContainerWidthConstraint" destination="7PG-vX-POP" id="ls6-Qu-ojx"/>
+                <outlet property="contentView" destination="g2P-aN-BT5" id="JxW-X7-N5H"/>
+                <outlet property="dotsView" destination="EK5-Tb-b1A" id="P8M-o8-dA6"/>
+                <outlet property="fadeView" destination="fIV-5p-Ps5" id="rba-9B-bRl"/>
+                <outlet property="footerHeightConstraint" destination="dHn-XQ-g8Y" id="qeb-N7-kKQ"/>
+                <outlet property="footerView" destination="pD9-pg-pg5" id="LvV-ND-7rr"/>
+                <outlet property="headerView" destination="4Ea-kn-6LH" id="gDw-Um-L7X"/>
+                <outlet property="scrollView" destination="LSj-KV-rk5" id="pNL-SC-53Z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="oRi-ng-N6Z">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIV-5p-Ps5" userLabel="Fade View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.094117647060000004" green="0.16078431369999999" blue="0.23921568630000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Z1r-t8-KoL" appends="YES" id="pF1-bc-9wv"/>
+                    </connections>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFi-ex-ZQz" userLabel="Container">
+                    <rect key="frame" x="10" y="682" width="355" height="533.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ea-kn-6LH" customClass="DepartureDetailsHeaderView" customModule="Via" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="75"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="75" id="aFb-Jk-oJy"/>
+                            </constraints>
+                        </view>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSj-KV-rk5">
+                            <rect key="frame" x="0.0" y="75" width="355" height="355.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Z3U-eA-YkN">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="355.5"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2P-aN-BT5" customClass="DepartureDetailsContentView" customModule="Via" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="355.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="355" id="7PG-vX-POP"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Z3U-eA-YkN" firstAttribute="height" secondItem="LSj-KV-rk5" secondAttribute="height" id="Qo8-S8-NQu"/>
+                                <constraint firstItem="Z3U-eA-YkN" firstAttribute="top" secondItem="LSj-KV-rk5" secondAttribute="top" id="RPV-Xw-MiO"/>
+                                <constraint firstAttribute="bottom" secondItem="Z3U-eA-YkN" secondAttribute="bottom" id="RyE-IJ-Ph5"/>
+                                <constraint firstAttribute="trailing" secondItem="Z3U-eA-YkN" secondAttribute="trailing" id="aEf-g7-LwN"/>
+                                <constraint firstItem="Z3U-eA-YkN" firstAttribute="leading" secondItem="LSj-KV-rk5" secondAttribute="leading" id="z2G-1v-0yw"/>
+                            </constraints>
+                        </scrollView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pD9-pg-pg5" customClass="DepartureDetailsFooterView" customModule="Via" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="478.5" width="355" height="55"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="dHn-XQ-g8Y"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EK5-Tb-b1A" customClass="DepartureDetailsDotsView" customModule="Via" customModuleProvider="target">
+                            <rect key="frame" x="16" y="450.5" width="323" height="8"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="8" id="ron-WE-YLn"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="pD9-pg-pg5" secondAttribute="bottom" id="2vP-K1-YTx"/>
+                        <constraint firstItem="LSj-KV-rk5" firstAttribute="leading" secondItem="DFi-ex-ZQz" secondAttribute="leading" id="5Bv-Ll-Tvp"/>
+                        <constraint firstItem="EK5-Tb-b1A" firstAttribute="leading" secondItem="DFi-ex-ZQz" secondAttribute="leading" constant="16" id="5eY-Q0-CNp"/>
+                        <constraint firstItem="EK5-Tb-b1A" firstAttribute="top" secondItem="LSj-KV-rk5" secondAttribute="bottom" constant="20" id="Cbi-yA-ajG"/>
+                        <constraint firstItem="pD9-pg-pg5" firstAttribute="leading" secondItem="DFi-ex-ZQz" secondAttribute="leading" id="LyT-Ci-cG1"/>
+                        <constraint firstItem="4Ea-kn-6LH" firstAttribute="leading" secondItem="DFi-ex-ZQz" secondAttribute="leading" id="OHM-gz-cqV"/>
+                        <constraint firstAttribute="trailing" secondItem="pD9-pg-pg5" secondAttribute="trailing" id="PGM-IZ-Mri"/>
+                        <constraint firstAttribute="trailing" secondItem="EK5-Tb-b1A" secondAttribute="trailing" constant="16" id="Re4-sn-SgB"/>
+                        <constraint firstAttribute="trailing" secondItem="4Ea-kn-6LH" secondAttribute="trailing" id="Ryh-up-uyf"/>
+                        <constraint firstAttribute="height" constant="533" id="SGl-cD-Uz9"/>
+                        <constraint firstItem="LSj-KV-rk5" firstAttribute="top" secondItem="4Ea-kn-6LH" secondAttribute="bottom" id="ihM-M6-RJQ"/>
+                        <constraint firstItem="pD9-pg-pg5" firstAttribute="top" secondItem="EK5-Tb-b1A" secondAttribute="bottom" constant="20" id="iyB-cG-Sae"/>
+                        <constraint firstItem="4Ea-kn-6LH" firstAttribute="top" secondItem="DFi-ex-ZQz" secondAttribute="top" id="rPw-BM-deJ"/>
+                        <constraint firstAttribute="trailing" secondItem="LSj-KV-rk5" secondAttribute="trailing" id="y5Q-dS-Gza"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="DFi-ex-ZQz" firstAttribute="leading" secondItem="oRi-ng-N6Z" secondAttribute="leading" constant="10" id="1NY-BK-Tvq"/>
+                <constraint firstItem="fIV-5p-Ps5" firstAttribute="leading" secondItem="oRi-ng-N6Z" secondAttribute="leading" id="93o-dS-Ted"/>
+                <constraint firstItem="fIV-5p-Ps5" firstAttribute="top" secondItem="oRi-ng-N6Z" secondAttribute="top" id="Amc-sL-PWm"/>
+                <constraint firstAttribute="bottom" secondItem="DFi-ex-ZQz" secondAttribute="top" constant="-15" id="Cot-jI-EFi"/>
+                <constraint firstAttribute="bottom" secondItem="fIV-5p-Ps5" secondAttribute="bottom" id="fHk-HO-3LY"/>
+                <constraint firstAttribute="trailing" secondItem="DFi-ex-ZQz" secondAttribute="trailing" constant="10" id="tgC-RZ-acb"/>
+                <constraint firstItem="fIV-5p-Ps5" firstAttribute="trailing" secondItem="oRi-ng-N6Z" secondAttribute="trailing" id="vJc-e1-v0j"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="xu6-lR-8Jq"/>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+        <tapGestureRecognizer id="Z1r-t8-KoL">
+            <connections>
+                <action selector="didTap:" destination="-1" id="Xmm-C5-Crz"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

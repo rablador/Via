@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="ox0-0E-vWN" customClass="FavoriteStopCell" customModule="Via" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ox0-0E-vWN" id="eTc-sc-xGU">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_stop_short" translatesAutoresizingMaskIntoConstraints="NO" id="ZwJ-6e-5cO">
+                        <rect key="frame" x="20" y="12" width="16" height="22"/>
+                    </imageView>
+                    <label contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gråberget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBr-Qz-LXC">
+                        <rect key="frame" x="52" y="14" width="77" height="19.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <color key="textColor" red="0.80392156859999997" green="0.8980392157" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojL-KB-1Qv">
+                        <rect key="frame" x="330.5" y="4" width="37.5" height="37.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ojL-KB-1Qv" secondAttribute="height" multiplier="1:1" id="xOC-5L-s1O"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="9" minY="9" maxX="9" maxY="9"/>
+                        <state key="normal" image="delete"/>
+                        <connections>
+                            <action selector="didTapButton:" destination="ox0-0E-vWN" eventType="touchUpInside" id="ImT-Ut-sLG"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.094117647060000004" green="0.16078431369999999" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ojL-KB-1Qv" secondAttribute="bottom" constant="4" id="08J-eT-zqZ"/>
+                    <constraint firstItem="ZwJ-6e-5cO" firstAttribute="leading" secondItem="eTc-sc-xGU" secondAttribute="leading" constant="20" id="5Nd-PD-bwA"/>
+                    <constraint firstItem="ojL-KB-1Qv" firstAttribute="top" secondItem="eTc-sc-xGU" secondAttribute="top" constant="4" id="8jH-5T-mKQ"/>
+                    <constraint firstItem="ojL-KB-1Qv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oBr-Qz-LXC" secondAttribute="trailing" constant="8" id="PZI-bS-drw"/>
+                    <constraint firstItem="oBr-Qz-LXC" firstAttribute="centerY" secondItem="ZwJ-6e-5cO" secondAttribute="centerY" id="T2P-P0-CT4"/>
+                    <constraint firstItem="ZwJ-6e-5cO" firstAttribute="centerY" secondItem="eTc-sc-xGU" secondAttribute="centerY" id="TrE-Vh-OaK"/>
+                    <constraint firstAttribute="trailing" secondItem="ojL-KB-1Qv" secondAttribute="trailing" constant="7" id="iNA-WH-9OY"/>
+                    <constraint firstItem="oBr-Qz-LXC" firstAttribute="leading" secondItem="ZwJ-6e-5cO" secondAttribute="trailing" constant="16" id="s7s-cL-GE5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="button" destination="ojL-KB-1Qv" id="7un-Uf-BiG"/>
+                <outlet property="icon" destination="ZwJ-6e-5cO" id="b3Q-KP-f3E"/>
+                <outlet property="label" destination="oBr-Qz-LXC" id="nfV-T5-B9y"/>
+            </connections>
+            <point key="canvasLocation" x="17" y="-159"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="delete" width="31" height="31"/>
+        <image name="icon_stop_short" width="16" height="22"/>
+    </resources>
+</document>

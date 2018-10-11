@@ -1,0 +1,11 @@
+framework module DynamicStackView {
+  umbrella header "DynamicStackView.h"
+
+  export *
+  module * { export * }
+}
+
+module DynamicStackView.Swift {
+    header "DynamicStackView-Swift.h"
+    requires objc
+}
